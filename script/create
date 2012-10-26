@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -x
+
+ROLE=${1:-app}
+
+knife ec2 server create \
+  -x ubuntu -i cposc-cloud.pem \
+  -r "role[$ROLE]"

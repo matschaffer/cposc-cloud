@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -x
+
+ROLE=${1:-app}
+
+knife ssh -x ubuntu \
+          -i cposc-cloud.pem \
+          -a cloud.public_hostname \
+  "role:$ROLE" \
+  sudo chef-client
+

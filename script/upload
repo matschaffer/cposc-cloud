@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -x
+
+knife cookbook upload -o cookbooks cposc
