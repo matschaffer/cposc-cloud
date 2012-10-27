@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -x
+
+#./script/create db
+
+echo app app app | xargs -n1 -P3 ./script/create
+
+./script/create lb

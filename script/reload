@@ -1,0 +1,4 @@
+#!/bin/sh
+
+./script/upload
+./script/provision "$1"
