@@ -2,7 +2,8 @@
 
 set -x
 
-#./script/create db
+./script/create db
+./script/create db_slave
 
 echo app app app | xargs -n1 -P3 ./script/create
 
