@@ -9,4 +9,4 @@ env PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 chdir <%= @root %>
 
-exec sudo node server.js
+exec sudo NODE_ENV=production node server.js

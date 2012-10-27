@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -x
+
+knife ssh -x ubuntu \
+          -i cposc-cloud.pem \
+          -a cloud.public_hostname \
+  "role:db" \
+  'redis-cli set message "'$1'"'
