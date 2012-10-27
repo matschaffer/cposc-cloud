@@ -1,0 +1,12 @@
+description "Hello CPOSC"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+
+env PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+chdir <%= @root %>
+
+exec sudo node server.js
