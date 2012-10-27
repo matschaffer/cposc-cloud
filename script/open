@@ -1,0 +1,13 @@
+#!/bin/sh
+
+PORT=80
+
+if [[ $1 == app ]]; then
+  PORT=8000
+fi
+
+HOSTS=$(knife search node role:$1 -a cloud.public_hostname | grep hostname | awk '{print $2}')
+
+for HOST in $HOSTS; do
+  open http://$HOST:$PORT
+done
